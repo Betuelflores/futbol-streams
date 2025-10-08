@@ -1,71 +1,49 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>🦁👑 Fútbol Streams Premium</title>
+import streamlit as st
+
+# Configuración de la página
+st.set_page_config(page_title="🦁👑 Fútbol Streams Premium", layout="wide")
+
+# Título con estilo
+st.markdown("""
+    <h1 style='text-align: center; color: #ffcc00; font-size: 3em;'>⚽ Fútbol Streams Premium 🦁👑</h1>
+""", unsafe_allow_html=True)
+
+# Estilo CSS personalizado (fondo oscuro, verde futbolero)
+st.markdown("""
     <style>
-        body {
-            background: #1a1a1a;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background: #000;
-            padding: 15px;
-            border-bottom: 3px solid #00ff00;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #ffcc00;
-        }
-        .partido {
-            background: #333;
-            padding: 20px;
-            margin: 15px auto;
-            max-width: 700px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-        }
-        .partido h2 {
-            color: #00ff00;
-            margin: 0 0 10px;
-        }
-        .partido p {
-            margin: 5px 0;
-            color: #ccc;
-        }
-        .logo {
-            max-width: 150px;
-            margin-bottom: 10px;
-        }
-        video {
-            max-width: 100%;
-            border: 2px solid #00ff00;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+        .main { background-color: #1a1a1a; }
+        .stApp { background-color: #1a1a1a; }
+        .partido { background-color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); margin: 15px 0; }
+        .logo { max-width: 150px; display: block; margin: 0 auto 10px; }
+        h2 { color: #00ff00; text-align: center; }
+        p { color: #ccc; text-align: center; }
     </style>
-</head>
-<body>
-    <header>
-        <h1>⚽ Fútbol Streams Premium 🦁👑</h1>
-    </header>
-    <div class="partido">
-        <img src="https://i.ibb.co/M57Q0Kv/espn-premium2.png" alt="ESPN Premium Logo" class="logo">
-        <h2>River Plate vs Boca Juniors</h2>
-        <p>Domingo 12/10, 20:00 - ESPN Premium</p>
-        <video controls>
+""", unsafe_allow_html=True)
+
+# Contenido principal
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown('<div class="partido">', unsafe_allow_html=True)
+    st.image("https://i.ibb.co/M57Q0Kv/espn-premium2.png", caption="ESPN Premium", use_column_width=True)
+    st.markdown('<h2>River Plate vs Boca Juniors</h2>', unsafe_allow_html=True)
+    st.markdown('<p>Domingo 12/10, 20:00 - ESPN Premium</p>', unsafe_allow_html=True)
+    
+    # Reproductor de video (usa HTML embed para streams HLS/.m3u8)
+    st.markdown("""
+        <video controls style="width: 100%; border: 2px solid #00ff00; border-radius: 5px;">
             <source src="http://newultra.xyz:8080/25515850/8H3H73fbxwZ/544" type="application/x-mpegURL">
+            Tu navegador no soporta video.
         </video>
-    </div>
-    <div class="partido">
-        <h2>Argentina vs Brasil</h2>
-        <p>Martes 14/10, 21:00 - TNT Sports</p>
-        <a href="#">Ver partido (próximamente)</a>
-    </div>
-</body>
-</html>
+    """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
+with col2:
+    st.markdown('<div class="partido">', unsafe_allow_html=True)
+    st.markdown('<h2>Argentina vs Brasil</h2>', unsafe_allow_html=True)
+    st.markdown('<p>Martes 14/10, 21:00 - TNT Sports</p>', unsafe_allow_html=True)
+    st.markdown('<p><a href="#" style="color: #00ff00; font-weight: bold;">Ver partido (próximamente)</a></p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# Pie de página
+st.markdown("<p style='text-align: center; color: #ccc;'>Exclusivo para el grupo 🦁👑 - Actualizado diariamente</p>", unsafe_allow_html=True)
