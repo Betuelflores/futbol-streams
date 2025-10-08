@@ -38,18 +38,9 @@
             margin: 5px 0;
             color: #ccc;
         }
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #00ff00;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        a:hover {
-            background: #ffcc00;
-            color: #000;
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
         }
         video {
             max-width: 100%;
@@ -64,17 +55,17 @@
         <h1>⚽ Fútbol Streams Premium 🦁👑</h1>
     </header>
     <div class="partido">
+        <img src="https://i.ibb.co/M57Q0Kv/espn-premium2.png" alt="ESPN Premium Logo" class="logo">
         <h2>River Plate vs Boca Juniors</h2>
         <p>Domingo 12/10, 20:00 - ESPN Premium</p>
-        <a href="#">Ver partido (próximamente)</a>
-        <!-- Agregar video cuando tengas el .m3u -->
-        <!-- <video controls><source src="http://tu-servidor.com/stream.m3u8?token=abc123xyz" type="application/x-mpegURL"></video> -->
+        <video controls>
+            <source src="http://newultra.xyz:8080/25515850/8H3H73fbxwZ/544" type="application/x-mpegURL">
+        </video>
     </div>
     <div class="partido">
         <h2>Argentina vs Brasil</h2>
         <p>Martes 14/10, 21:00 - TNT Sports</p>
         <a href="#">Ver partido (próximamente)</a>
-        <!-- <video controls><source src="http://tu-servidor.com/stream.m3u8?token=xyz789" type="application/x-mpegURL"></video> -->
     </div>
 </body>
 </html>
