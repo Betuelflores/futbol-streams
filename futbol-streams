@@ -1,5 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><title>🦁👑 Fútbol Streams</title></head>
-<body><h1>⚽ Fútbol Streams 🦁👑</h1></body>
+<head>
+    <meta charset="UTF-8">
+    <title>🦁👑 Fútbol Streams Premium</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #000;
+            padding: 15px;
+            border-bottom: 3px solid #00ff00;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ffcc00;
+        }
+        .partido {
+            background: #333;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        .partido h2 {
+            color: #00ff00;
+            margin: 0 0 10px;
+        }
+        .partido p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #00ff00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a:hover {
+            background: #ffcc00;
+            color: #000;
+        }
+        video {
+            max-width: 100%;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ Fútbol Streams Premium 🦁👑</h1>
+    </header>
+    <div class="partido">
+        <h2>River Plate vs Boca Juniors</h2>
+        <p>Domingo 12/10, 20:00 - ESPN Premium</p>
+        <a href="#">Ver partido (próximamente)</a>
+        <!-- Agregar video cuando tengas el .m3u -->
+        <!-- <video controls><source src="http://tu-servidor.com/stream.m3u8?token=abc123xyz" type="application/x-mpegURL"></video> -->
+    </div>
+    <div class="partido">
+        <h2>Argentina vs Brasil</h2>
+        <p>Martes 14/10, 21:00 - TNT Sports</p>
+        <a href="#">Ver partido (próximamente)</a>
+        <!-- <video controls><source src="http://tu-servidor.com/stream.m3u8?token=xyz789" type="application/x-mpegURL"></video> -->
+    </div>
+</body>
 </html>
